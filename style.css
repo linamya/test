@@ -1998,7 +1998,6 @@ padding:
             transparent 82%,
             rgba(0,0,0,.28)
         );
-
 }
 
 
@@ -2305,4 +2304,18 @@ padding:
     color: var(--blue);
     line-height: 1.2;
     text-align: center;
+}
+/* Миниатюрные винтажные орнаменты вместо линий в разделе «Детали» */
+.details .detail-item { border-bottom: none; position: relative; }
+.details .detail-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 18px;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("ornament.svg") center / contain no-repeat;
+    opacity: .7;
+    pointer-events: none;
 }
